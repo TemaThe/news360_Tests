@@ -4,7 +4,7 @@ from selene.tools import visit
 
 
 from core.driver_manager import getChromeDriver
-from core.locators import *
+from core.pages import *
 import time
 from selene.tools import set_driver, get_driver
 
