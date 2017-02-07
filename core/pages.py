@@ -9,11 +9,11 @@ class MainPage:
     DE_LANGUAGE_BUTTON = s("[v='de']")
 
     @classmethod
-    def openMainCreateAccountPopup(cls):
+    def open_main_popup(cls):
         cls.START_READING_BUTTON.click()
 
 
-class MainCreateAccountPopup():
+class MainPopup():
     SIGN_WITH_EMAIL_LINK = s(".simplepopup .bHSignIn .login-signin")
     CLOSE_CROSS = s(".close")
 
@@ -23,12 +23,12 @@ class MainCreateAccountPopup():
     AND_PASSWORD_TEXT = s(".simplepopup [ng-bind='::localization.landing_sign_in_password']")
 
     @classmethod
-    def openSingIN_WithEmailPopup(cls):
+    def open_sign_in_popup(cls):
         cls.SIGN_WITH_EMAIL_LINK.click()
 
 
 
-class SingIN_WithEmailPopup():
+class SignInPopup():
     EMAIL_FIELD = s(".simplepopup .bHSignIn .signin .email")
     PASSWORD_FIELD = s(".simplepopup .bHSignIn .signin .password")
 
@@ -43,17 +43,17 @@ class SingIN_WithEmailPopup():
     SING_IN_BUTTON = s(".simplepopup .bHSignIn .signin .signin-button")
 
     @classmethod
-    def signIn(cls, email, password):
+    def sign_in(cls, email, password):
         cls.EMAIL_FIELD.set(email)
         cls.PASSWORD_FIELD.set(password)
         cls.SING_IN_BUTTON.click()
 
     @classmethod
-    def openSingUP_WithEmailPopup(cls):
+    def open_sign_up_popup(cls):
         cls.SING_UP_LINK.click()
 
 
-class SingUP_WithEmailPopup():
+class SingUpPopup():
     EMAIL_FIELD = s(".simplepopup .bHSignIn .signup .email")
     PASSWORD_FIELD = s(".simplepopup .bHSignIn .signup .password")
     CONFIRM_PASSWORD_FIELD = s(".simplepopup .bHSignIn .signup .confirmpassword")
@@ -69,7 +69,7 @@ class SingUP_WithEmailPopup():
     SING_UP_BUTTON = s(".simplepopup .bHSignIn .signup .signup-button")
 
     @classmethod
-    def signUp(cls, email, password):
+    def sign_up(cls, email, password):
         cls.EMAIL_FIELD.set(email)
         cls.PASSWORD_FIELD.set(password)
         cls.CONFIRM_PASSWORD_FIELD.set(password)
@@ -85,27 +85,36 @@ class ResetPasswordPopup():
 
     RESET_PASSWORD_BUTTON = s(".simplepopup .bHSignIn .resetpassword .reset-button")
 
-class MainLoggedInUserPage():
+class LoggedUserPage():
     LOGO = s(".logo")
     USERNAME = s(".username")
+    SETTINGS_LINK = s(".user")
 
     @classmethod
-    def checkPageLoaded(cls, email):
+    def assert_user_logged_in(cls, email):
         cls.LOGO.should_be(visible, timeout=20)
-        name = cls.getNameFromEmail(email)
+
+    @classmethod
+    def open_settings(cls):
+        cls.SETTINGS_LINK.click()
+
+    @classmethod
+    def assert_right_user_logged_in(cls, email):
+        name = email.rpartition('@')[0].upper()
         cls.USERNAME.should_have(exact_text(name), timeout=5)
 
+class SettingsPage():
+    LOGOUT = s(".logout")
+
     @classmethod
-    def getNameFromEmail(cls, email):
-        return email.rpartition('@')[0].upper()
+    def logout(cls):
+        cls.LOGOUT.click()
 
-
-
-class JustSingedUPUserPage():
+class FirstTimeLoggedPage():
     START_READING = s(".startReading")
 
     @classmethod
-    def startReading(cls):
+    def start_reading(cls):
         cls.START_READING.insist(condition=clickable, timeout=15)
         cls.START_READING.insist(condition=visible, timeout=15)
         cls.START_READING.hover().click()

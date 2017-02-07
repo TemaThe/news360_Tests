@@ -1,0 +1,4 @@
+selenium
+selene --pre
+pytest
+pytest-xdist
