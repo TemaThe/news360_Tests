@@ -1,7 +1,7 @@
 <h4>Project Description</h4>
 This is test task provided by the news360.com company as a task for candidate to QA Automation Team Lead position.</br>
 The description of the task you can find in <b>test_design\test_task_for_qa_test_automation.pdf</b></br>
-In short candidate should create set of test cases for login form and then create framework and samples of auto tests.
+In short candidate should create set of test cases for login form and then create some samples of auto-tests.
 
 <h4>Requirements</h4>
 
