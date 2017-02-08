@@ -6,6 +6,5 @@ core/__init__.pyc
 core/__pycache__/
 core/driver_manager.pyc
 core/pages.pyc
-test_design/
 tests/__init__.pyc
 tests/__pycache__/
