@@ -1,3 +1,4 @@
+# coding: utf-8
 import os
 from sys import platform as _platform
 from selenium import webdriver

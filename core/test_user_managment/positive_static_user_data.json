@@ -1,23 +1,23 @@
 {
-"test@asmtest.ru" : "123456",
+"test@asmtestnormal.ru" : "123456",
 "test123@asmtest.ru" : "123456",
 "test.test@asmtest.ru" : "123456",
 "TEST@asmtest.ru" : "123456",
-"tEst@asmtest.ru" : "123456",
+"tEstonebig@asmtest.ru" : "123456",
 "test-test@asmtest.ru" : "123456",
 "test_test@asmtest.ru" : "123456",
-"_test_@asmtest.ru" : "123456",
+"_test_@asmtestunderscore.ru" : "123456",
 "'test@asmtest.ru" : "123456",
 "1@asmtest.ru" : "123456",
 "q@asmtest.ru" : "123456",
 "maximumlengthofemailaddressmaximumlengthofemailaddressmaximumlen@asmtest.ru" : "123456",
 "!#$%&'*+-/=?^_`{|}~@asmtest.ru" : "123456",
 "test@asmtest.test.test" : "123456",
-"test@[192.168.2.1]" : "123456",
-"test@asmTEST.RU" : "123456",
+"test@[192.168.2.2]" : "123456",
+"testsecondupper@asmTESTB.RU" : "123456",
 "test@asmtestq.ru" : "QWERTY",
 "test@asmtest1.ru" : "123456",
 "test@asmtestq1.ru" : "Q123werty",
-"test@asmtestsign.ru" : "~!'@#$%^&*\"()",
-"test@asmtestdict.ru" : "[6 spakes]"
+"test@asmtestsign.ru" : "~!'@#$%^&*\"()"
 }
+

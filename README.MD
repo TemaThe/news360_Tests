@@ -4,4 +4,4 @@
 <li>Install all requirements using: <i>pip install -r requirements.txt</i></li>
 
 <h4>Run</h4>
-<li> py.test -n2 test_sing_in.py</li>
+<li> py.test test_sing_in.py</li>
