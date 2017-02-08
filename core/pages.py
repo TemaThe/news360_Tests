@@ -64,7 +64,7 @@ class SignInPopup():
 
     @classmethod
     def assert_top_error_msg(cls):
-        cls.UPPER_ERROR_COMMENT.should_be(exact_text(INVALID_LOGIN_OR_PASSWORD_EN))
+        cls.UPPER_ERROR_COMMENT.should_be(exact_text(INVALID_LOGIN_OR_PASSWORD))
 
 
 

@@ -9,7 +9,7 @@ from core.test_user_managment.test_data_generator import *
 @pytest.mark.usefixtures("before_each_test")
 class TestNegativeSignUp():
 
-    @pytest.mark.skip
+
     def test_no_local_part_in_email(self):
         email = "@test.ru"
         password = "132435"
@@ -17,7 +17,7 @@ class TestNegativeSignUp():
         SingUpPopup.sign_up(email, password)
         SingUpPopup.assert_email_field_first_error_msg(THIS_VALUE_SHOULD_BE_A_VALID_EMAIL)
 
-    @pytest.mark.skip
+
     def test_too_short_password(self):
         email = "test"+ get_str_timestamp() + "@test.ru"
         password = "12345"
