@@ -19,8 +19,8 @@ Except test_sign_up.py due to strange error, may be connected to py.test known b
 <h4>Test framework description</h4>
 For auto tests implementation was chosen python language and  <a href="https://github.com/yashaka/selene" >selen framework</a> based 
 on Selenium Web Driver.</br>
-pytest was used as testing framework</br>
-Also Page Object was used as a main pattern .</br>
+pytest was used as testing framework.</br>
+Also Page Object was used as a main pattern.</br>
 </br>
 <b>core\pages.py</b> contains several classes, each represents screen or page of the web site.</br>
 Each classes consist of elements like button or fields or message that used CSS selectors to be found</br>
@@ -47,7 +47,7 @@ In <b>conftest.py</b> you can find set_up and tear_down methods for all tests.</
 
 <h4>Test Design description</h4>
 In <b>test_design</b> folder you can find all docs about TD.</br>
-General plans you can find in <b>test_design\img</b> or <b>test_design\img</b> if you have xmind app. </br>
+General plans you can find in <b>test_design\img</b> or <b>test_design\xmind</b> if you have xmind app. </br>
 </br>
 Test cases located in <b>tests.ods</b> file.</br>
 There are several sheets in it.</br>
@@ -65,7 +65,7 @@ Or if we put about 60000 chars in password field we get the JS popup error.</br>
 <b>Only this positive tests were automated fully and negative tests were automated partly. </b></br>
 </br>
 Due to time limitation also test using REST API was not created. </br>
-In real project this way will be also used to divide errors on client side from errors on server side</br>
+In real project this way will be also used to divide errors on client side from errors on server side.</br>
 
 
 
