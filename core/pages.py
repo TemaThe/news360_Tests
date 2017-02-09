@@ -163,6 +163,6 @@ class FirstTimeLoggedPage():
 
     @classmethod
     def start_reading(cls):
-        cls.START_READING.insist(condition=clickable, timeout=1)
-        cls.START_READING.insist(condition=visible, timeout=1)
+        cls.START_READING.insist(condition=clickable, timeout=15)
+        cls.START_READING.insist(condition=visible, timeout=15)
         cls.START_READING.hover().click()
