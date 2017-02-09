@@ -134,7 +134,7 @@ class LoggedUserPage():
 
     @classmethod
     def assert_user_logged_in(cls, email):
-        cls.LOGO.should_be(visible, timeout=20)
+        cls.LOGO.should_be(visible, timeout=20) #big timeout because of proxy connection
 
     @classmethod
     def open_settings(cls):
@@ -163,6 +163,6 @@ class FirstTimeLoggedPage():
 
     @classmethod
     def start_reading(cls):
-        cls.START_READING.insist(condition=clickable, timeout=15)
-        cls.START_READING.insist(condition=visible, timeout=15)
+        cls.START_READING.insist(condition=clickable, timeout=15)#big timeout because of proxy connection
+        cls.START_READING.insist(condition=visible, timeout=15)#big timeout because of proxy connection
         cls.START_READING.hover().click()
