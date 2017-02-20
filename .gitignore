@@ -2,9 +2,5 @@
 .gitignore
 .idea/
 /core/test_user_managment/second_chance.json
-core/__init__.pyc
-core/__pycache__/
-core/driver_manager.pyc
-core/pages.pyc
-tests/__init__.pyc
+*.pyc
 tests/__pycache__/
