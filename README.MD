@@ -14,7 +14,7 @@ In short candidate should create set of test cases for login form and then creat
 
 <h5>Also tests can be run in parallel</h5>
 <li> py.test <b>-n3</b> test_negative_sing_up.py</li>
-Except test_sign_up.py due to strange error, may be connected to py.test known bug.
+
 </br>
 <h4>Test framework description</h4>
 For auto tests implementation was chosen python language and  <a href="https://github.com/yashaka/selene" >selen framework</a> based 
